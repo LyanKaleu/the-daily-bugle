@@ -529,6 +529,10 @@ main {
 }
 
 .tab-header__item {
+    cursor: pointer;
+}
+
+.tab-header__title {
     background-color: var(--clr-main);
     color: var(--clr-text-light);
 }
