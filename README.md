@@ -1,0 +1,2 @@
+# the-daily-bugle
+ "The Daily Bugle" é um projeto inspirado no famoso tabloide fictício do universo Marvel, conhecido por ser uma presença marcante nos quadrinhos do Homem-Aranha e em suas adaptações para outras mídias. Desenvolvido em HTML, CSS e JavaScript, o projeto recria o ambiente de um portal de notícias com a temática do jornal, oferecendo uma interface visual imersiva que remete ao icônico estilo dos tabloides nova-iorquinos.

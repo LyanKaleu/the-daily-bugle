@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Daily Bugle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/splide.min.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <h1 class="--sr-only">The Daily Bugle</h1>
+    <nav class="navbar">
+        <img src="assets/logo.png" alt="Logo Daily Bugle" class="navbar__logo">
+        <div class="navbar__buttons">
+            <div class="fab fa-facebook social-icon"></div>
+            <div class="fab fa-twitter social-icon"></div>
+            <div class="fab fa-instagram social-icon"></div>
+            <button class="btn">about us</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="main-news">
+            <h2 class="main-news__title"><a href="#"> the real <br> spider-man!</a></h2>
+            <p class="main-news__description"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi fugit delectus a ea, numquam ab ullam veniam nostrum voluptatum placeat recusandae hic provident. Adipisci cupiditate animi officia quisquam! Porro, illo!</a></p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="news-ticker">
+            <div class="ticker">
+                <h2 class="ticker__title">breaking</h2>
+                <ul class="ticker-list">
+                    <li class="ticker-list__item ticker-list__item--show">Who is Peter Parker?</li>
+                    <li class="ticker-list__item">The Real Spider-man!</li>
+                    <li class="ticker-list__item">Rai on area Fify-fail</li>
+                    <li class="ticker-list__item">The Search for Morris Bench!</li>
+                    <li class="ticker-list__item">Meet Spiderman's Girlfriend</li>
+                </ul>
+            </div>
+            <div class="ticket-buttons">
+                <i class="fas fa-chevron-left ticker-buttons__btn-prev"></i>
+                <i class="fas fa-chevron-right ticker-buttons__btn-next"></i>
+            </div>
+        </section>
+
+        <main>
+            <article class="featured-news">
+                <img src="assets/featured_a.jpg" alt="Imagem do Peter Parker" class="featured-news__thumb">
+                <div class="featured-news-excerpt">
+                    <h2 class="featured-news-excerpt__title">Who is Peter Parker?</h2>
+                    <p class="featured-news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam fuga, aliquid unde quas ea, odit tempore praesentium vel, molestias aspernatur ullam consequatur aperiam quos quidem. Dicta provident aliquam officiis ipsam.</a></p>
+                </div>
+            </article>
+
+            <div class="ad">
+                <a href="#">
+                    <img src="assets/anuncio_1.jpg" alt="anuncio de tênis">
+                </a>
+            </div>
+
+            <div class="news-group">
+                <article class="news">
+                    <img src="assets/news_1.jpg" alt="" class="news__thumb">
+                    <div class="news-excerpt">
+                        <h2 class="news-excerpt__title">NIGHT MONKEY: ANOTHER MASKED MENACE?</h2>
+                        <p class="news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum voluptas, iste sunt pariatur non nisi temporibus iusto quibusdam alias fugit? Voluptatibus labore reprehenderit asperiores! Dolore corrupti in reiciendis molestiae.</a></p>
+                    </div>
+                </article>
+
+                <article class="news">
+                    <img src="assets/news_2.jpg" alt="" class="news__thumb">
+                    <div class="news-excerpt">
+                        <h2 class="news-excerpt__title">THE SEARCH FOR MORRIS BENCH!</h2>
+                        <p class="news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ratione qui maxime iure iste aut tempora officia et necessitatibus. Labore libero ea nulla. Dolores blanditiis, dignissimos dolor excepturi deserunt eius?</a></p>
+                    </div>
+                </article>
+
+                <article class="news">
+                    <img src="assets/news_3.jpg" alt="" class="news__thumb">
+                    <div class="news-excerpt">
+                        <h2 class="news-excerpt__title">SPIDER-MAN FIRES FIRST SHOT IN MOB WAR!</h2>
+                        <p class="news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum enim voluptate perferendis magnam asperiores eos ut consequatur saepe modi natus, minus laboriosam consectetur temporibus atque nesciunt eligendi voluptates et unde.</a></p>
+                    </div>
+                </article>
+
+                <img src="assets/blip-blog.png" alt="Banner do blip blog" class="banner-blip-blog">
+
+            </div>
+            <div class="news-group">
+                <div class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="splide__slide__container">
+                                    <img src="assets/slider-img_1.png" alt="">
+                                </div>
+                                <div class="splide-slide-info">
+                                    <h2 class="splide-slide-info__title">A true hero: the magnificent mysterio</h2>
+                                    <p class="splide-slide-info__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate tempora sint maxime assumenda commodi sequi officiis, debitis odio temporibus reiciendis quo provident veniam nisi voluptatum consequatur, deserunt natus obcaecati.</a></p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="splide__slide__container">
+                                    <img src="assets/slider-img_2.png" alt="">
+                                </div>
+                                <div class="splide-slide-info">
+                                    <h2 class="splide-slide-info__title">The search for morris bench!</h2>
+                                    <p class="splide-slide-info__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate tempora sint maxime assumenda commodi sequi officiis, debitis odio temporibus reiciendis quo provident veniam nisi voluptatum consequatur, deserunt natus obcaecati.</a></p>
+                                </div>
+                            </li>
+                            <li class="splide__slide"></li>
+                                <div class="splide__slide__container">
+                                    <img src="assets/slider-img_3.png" alt="">
+                                </div>
+                                <div class="splide-slide-info">
+                                    <h2 class="splide-slide-info__title">The queen asks: “wither mysterio?”</h2>
+                                    <p class="splide-slide-info__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate tempora sint maxime assumenda commodi sequi officiis, debitis odio temporibus reiciendis quo provident veniam nisi voluptatum consequatur, deserunt natus obcaecati.</a></p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="splide__slide__container">
+                                    <img src="assets/slider-img_4.png" alt="">
+                                </div>
+                                <div class="splide-slide-info">
+                                    <h2 class="splide-slide-info__title">Spider-man fires first shot in mob war!</h2>
+                                    <p class="splide-slide-info__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate tempora sint maxime assumenda commodi sequi officiis, debitis odio temporibus reiciendis quo provident veniam nisi voluptatum consequatur, deserunt natus obcaecati.</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <article class="news">
+                    <img src="assets/news_7.jpg" alt="" class="news__thumb">
+                    <div class="news-excerpt">
+                        <h2 class="news-excerpt__title">THE QUEEN ASKS: “WITHER MYSTERIO?”</h2>
+                        <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat deleniti ea est mollitia, amet obcaecati dignissimos exercitationem ex soluta quo asperiores magni! Deserunt laboriosam repellat reiciendis iste illum recusandae repudiandae.</a></p>
+                    </div>
+                </article>
+            </div>
+            <div class="news-group">
+                <div class="tabs">
+                    <div class="tab-header">
+                        <div class="tab-header__title">don't miss</div>
+                        <div class="tab-header__item">Hot</div>
+                        <div class="tab-header__item">New</div>
+                    </div>
+                    <div class="tab-indicator"></div>
+                    <div class="tab-body">
+                        <div class="tab-body__content--active">
+                            <article class="news">
+                                <img src="assets/news_1.jpg" alt="Imagem do Peter Parker" class="news__thumb">
+                                <div class="news-excerpt">
+                                    <h2 class="news-excerpt__title">NIGHT MONKEY: ANOTHER MASKED MENACE?</h2>
+                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
+                                </div>
+                            </article>
+                            <article class="news">
+                                <img src="assets/news_3.jpg" alt="Imagem do Peter Parker" class="news__thumb">
+                                <div class="news-excerpt">
+                                    <h2 class="news-excerpt__title">SPIDER-MAN FIRES FIRST SHOT IN MOB WAR!</h2>
+                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
+                                </div>
+                            </article>
+                            <article class="news">
+                                <img src="assets/news_7.jpg" alt="Imagem do Peter Parker" class="news__thumb">
+                                <div class="news-excerpt">
+                                    <h2 class="news-excerpt__title">THE QUEEN ASKS: “WITHER MYSTERIO?”</h2>
+                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
+                                </div>
+                            </article>
+                            <article class="news">
+                                <img src="assets/news_2.jpg" alt="Imagem do Peter Parker" class="news__thumb">
+                                <div class="news-excerpt">
+                                    <h2 class="news-excerpt__title">THE SEARCH FOR MORRIS BENCH!</h2>
+                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
+                                </div>
+                            </article>
+                            <article class="news">
+                                <img src="assets/news_6.jpg" alt="Imagem do Peter Parker" class="news__thumb">
+                                <div class="news-excerpt">
+                                    <h2 class="news-excerpt__title">RAID ON AREA FIFTY-FAIL</h2>
+                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="tab-body__content">
+                            <article class="news">
+                                <img src="assets/news_3.jpg" alt="Imagem do Peter Parker" class="news__thumb">
+                                <div class="news-excerpt">
+                                    <h2 class="news-excerpt__title">SPIDER-MAN FIRES FIRST SHOT IN MOB WAR!</h2>
+                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
+                                </div>
+                            </article>
+                            <article class="news">
+                                <img src="assets/news_7.jpg" alt="Imagem do Peter Parker" class="news__thumb">
+                                <div class="news-excerpt">
+                                    <h2 class="news-excerpt__title">THE QUEEN ASKS: “WITHER MYSTERIO?”</h2>
+                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
+                                </div>
+                            </article>
+                            <article class="news">
+                                <img src="assets/news_2.jpg" alt="Imagem do Peter Parker" class="news__thumb">
+                                <div class="news-excerpt">
+                                    <h2 class="news-excerpt__title">THE SEARCH FOR MORRIS BENCH!</h2>
+                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="club">
+                <h3 class="club__title">Join our club</h3>
+                <p class="club__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia temporibus debitis labore possimus necessitatibus reiciendis fugit aut esse adipisci in et perferendis doloremque, neque eaque nobis a dolore ullam.</p>
+                <button class="btn btn--large">join now</button>
+            </div>
+            <article class="featured-news">
+                <div class="featured-news-excerpt">
+                    <h2 class="featured-news-excerpt__title">meet spider man's girlfriend</h2>
+                    <p class="featured-news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi a repudiandae sunt consequuntur earum voluptatum mollitia soluta cumque odio! Quia eaque quo, excepturi accusamus numquam maxime dolores cupiditate libero voluptates!</a></p>
+                </div>
+                <img src="assets/featured_b.jpg" alt="Imagem do Peter Parker e da MJ" class="featured-news__thumb">
+            </article>
+        </main>
+    </div>
+
+        <img src="assets/channels4_banner.jpg" alt="">
+
+        <section class="ads">
+            <div class="ad">
+                <a href="#">
+                    <img src="assets/anuncio_2.jpg" alt="anuncio da bebida">
+                </a>
+            </div>
+
+            <div class="ad">
+                <a href="#">
+                    <img src="assets/anuncio_3.jpg" alt="anuncio de supermercado">
+                </a>
+            </div>
+
+            <div class="ad">
+                <a href="#">
+                    <img src="assets/anuncio_4.jpg" alt="anuncio loja de roupas">
+                </a>
+            </div>
+        </section>
+
+    <footer>
+        <div class="footer-sections">
+            <section class="footer-about">
+                <h3 class="footer__section-title">
+                    <img src="assets/logo.png" alt="Logo Daily Bugle">
+                </h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, delectus ab quia ipsam doloribus voluptatem vero asperiores dicta sint libero optio aut cumque maxime ad fuga rerum. Illo, nisi! Totam?</p>
+            </section>
+
+            <section class="footer-newsletter">
+                <h3 class="footer__section-title">newsletter</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum deserunt voluptatem numquam a sint, qui nisi itaque dolore nulla illum enim velit fuga libero ex aut laborum dolores accusantium eaque?</p>
+                <input type="text" placeholder="Enter your email..." class="footer-newsletter__email">
+                <button class="btn btn--large">subscribe</button>
+            </section>
+
+            <section class="footer-links">
+                <h3 class="footer__section-title">site links</h3>
+                <ul class="footer-links__list">
+                    <li class="footer-links__item"><a href="#"> Help & Support </a></li>
+                    <li class="footer-links__item"><a href="#"> Privacy Policy </a></li>
+                    <li class="footer-links__item"><a href="#"> About Us </a></li>
+                    <li class="footer-links__item"><a href="#"> Contact </a></li>
+                </ul>
+            </section>
+
+            <section class="footer-club">
+                <h3 class="footer__section-title">join our club</h3>
+                <p class="footer-club__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, molestiae itaque amet obcaecati sint deserunt temporibus optio suscipit vero ea excepturi, natus pariatur quod mollitia laudantium ipsum voluptatum odio velit.
+                </p>
+                <button class="btn btn--large">join now</button>
+            </section>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/splide.min.js"></script>
+</body>
+</html>
