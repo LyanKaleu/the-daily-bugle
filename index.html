@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>The Daily Bugle</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,317 +23,254 @@
     <h1 class="--sr-only">The Daily Bugle</h1>
     <nav class="navbar">
         <img src="assets/logo.png" alt="Logo Daily Bugle" class="navbar__logo">
-        <div class="navbar__buttons">
-            <div class="fab fa-facebook social-icon"></div>
-            <div class="fab fa-twitter social-icon"></div>
-            <div class="fab fa-instagram social-icon"></div>
-            <button class="btn">about us</button>
-        </div>
+        <ul class="navbar-options">
+            <li><a href="#All">Notícias</a></li>
+            <li><a href="#About">Sobre</a></li>
+        </ul>
     </nav>
 
     <header class="hero">
         <div class="main-news">
-            <h2 class="main-news__title"><a href="#"> the real <br> spider-man!</a></h2>
-            <p class="main-news__description"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi fugit delectus a ea, numquam ab ullam veniam nostrum voluptatum placeat recusandae hic provident. Adipisci cupiditate animi officia quisquam! Porro, illo!</a></p>
+            <h2 class="main-news__title">O Verdadeiro Homem-Aranha: <br> O Que Ele Está Escondendo?</h2>
+            <p class="main-news__description">Quem é o Homem-Aranha e por que ele se esconde atrás de uma máscara? Enquanto muitos nova-iorquinos o tratam como um herói, suas ações levantam suspeitas. Ele atrai vilões poderosos para a cidade e age fora da lei, sem prestar contas a ninguém. Será que seus motivos são realmente nobres ou há algo mais sombrio por trás de seus atos? Com suas habilidades misteriosas e conexões duvidosas, o Homem-Aranha pode estar escondendo um perigo maior do que imaginamos. O Clarim Diário está comprometido em descobrir a verdade.</p>
+        </div>
+        <div class="row" style="position: absolute; top: 30px; right: 30px;">
+            <button id="increaseFont" class="btn">A+</button>
+            <button id="decreaseFont" class="btn">A-</button>
+            <button onclick="toggleTheme()" class="btn">Tema</button>
         </div>
     </header>
 
-    <div class="container">
-        <section class="news-ticker">
-            <div class="ticker">
-                <h2 class="ticker__title">breaking</h2>
-                <ul class="ticker-list">
-                    <li class="ticker-list__item ticker-list__item--show">Who is Peter Parker?</li>
-                    <li class="ticker-list__item">The Real Spider-man!</li>
-                    <li class="ticker-list__item">Rai on area Fify-fail</li>
-                    <li class="ticker-list__item">The Search for Morris Bench!</li>
-                    <li class="ticker-list__item">Meet Spiderman's Girlfriend</li>
-                </ul>
-            </div>
-
-            <div class="ticket-buttons">
-                <i class="fas fa-chevron-left ticker-buttons__btn-prev"></i>
-                <i class="fas fa-chevron-right ticker-buttons__btn-next"></i>
-            </div>
-        </section>
-
-        <main>
-            <article class="featured-news">
-                <img src="assets/featured_a.jpg" alt="Imagem do Peter Parker" class="featured-news__thumb">
-                <div class="featured-news-excerpt">
-                    <h2 class="featured-news-excerpt__title">Who is Peter Parker?</h2>
-                    <p class="featured-news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam fuga, aliquid unde quas ea, odit tempore praesentium vel, molestias aspernatur ullam consequatur aperiam quos quidem. Dicta provident aliquam officiis ipsam.</a></p>
+        <main id="All">
+            <section class="news-ticker">
+                <div class="ticker">
+                    <h2 class="ticker__title">breaking</h2>
+                    <ul class="ticker-list">
+                        <li class="ticker-list__item ticker-list__item--show">Quem é Peter Parker?</li>
+                        <li class="ticker-list__item">O Verdadeiro Homem-Aranha!</li>
+                        <li class="ticker-list__item">Rai on area Fify-fail</li>
+                        <li class="ticker-list__item">The Search for Morris Bench!</li>
+                        <li class="ticker-list__item">Meet Spiderman's Girlfriend</li>
+                    </ul>
                 </div>
-            </article>
-
-            <div class="ad">
-                <a href="#">
-                    <img src="assets/ad_1.jpg" alt="anuncio de tênis">
-                </a>
-            </div>
-
-            <div class="news-group">
-                <article class="news">
-                    <img src="assets/news_1.jpg" alt="" class="news__thumb">
-                    <div class="news-excerpt">
-                        <h2 class="news-excerpt__title">NIGHT MONKEY: ANOTHER MASKED MENACE?</h2>
-                        <p class="news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum voluptas, iste sunt pariatur non nisi temporibus iusto quibusdam alias fugit? Voluptatibus labore reprehenderit asperiores! Dolore corrupti in reiciendis molestiae.</a></p>
-                    </div>
-                </article>
-
-                <article class="news">
-                    <img src="assets/news_2.jpg" alt="" class="news__thumb">
-                    <div class="news-excerpt">
-                        <h2 class="news-excerpt__title">THE SEARCH FOR MORRIS BENCH!</h2>
-                        <p class="news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ratione qui maxime iure iste aut tempora officia et necessitatibus. Labore libero ea nulla. Dolores blanditiis, dignissimos dolor excepturi deserunt eius?</a></p>
-                    </div>
-                </article>
-
-                <article class="news">
-                    <img src="assets/news_3.jpg" alt="" class="news__thumb">
-                    <div class="news-excerpt">
-                        <h2 class="news-excerpt__title">SPIDER-MAN FIRES FIRST SHOT IN MOB WAR!</h2>
-                        <p class="news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum enim voluptate perferendis magnam asperiores eos ut consequatur saepe modi natus, minus laboriosam consectetur temporibus atque nesciunt eligendi voluptates et unde.</a></p>
-                    </div>
-                </article>
-
-                <img src="assets/blip-blog.png" alt="Banner do blip blog" class="banner-blip-blog">
-
-                <article class="news">
-                    <img src="assets/news_1.jpg" alt="" class="news__thumb">
-                    <div class="news-excerpt">
-                        <h2 class="news-excerpt__title">NIGHT MONKEY: ANOTHER MASKED MENACE?</h2>
-                        <p class="news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum voluptas, iste sunt pariatur non nisi temporibus iusto quibusdam alias fugit? Voluptatibus labore reprehenderit asperiores! Dolore corrupti in reiciendis molestiae.</a></p>
-                    </div>
-                </article>
-
-                <article class="news">
-                    <img src="assets/news_3.jpg" alt="" class="news__thumb">
-                    <div class="news-excerpt">
-                        <h2 class="news-excerpt__title">SPIDER-MAN FIRES FIRST SHOT IN MOB WAR!</h2>
-                        <p class="news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum voluptas, iste sunt pariatur non nisi temporibus iusto quibusdam alias fugit? Voluptatibus labore reprehenderit asperiores! Dolore corrupti in reiciendis molestiae.</a></p>
-                    </div>
-                </article>
-
-            </div>
-
-            <div class="news-group">
-                <div class="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="splide__slide__container">
-                                    <img src="assets/slider-img_1.png" alt="">
-                                </div>
-                                <div class="splide-slide-info">
-                                    <h2 class="splide-slide-info__title">A true hero: the magnificent mysterio</h2>
-                                    <p class="splide-slide-info__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate tempora sint maxime assumenda commodi sequi officiis, debitis odio temporibus reiciendis quo provident veniam nisi voluptatum consequatur, deserunt natus obcaecati.</a></p>
-                                </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="splide__slide__container">
-                                    <img src="assets/slider-img_2.png" alt="">
-                                </div>
-                                <div class="splide-slide-info">
-                                    <h2 class="splide-slide-info__title">The search for morris bench!</h2>
-                                    <p class="splide-slide-info__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate tempora sint maxime assumenda commodi sequi officiis, debitis odio temporibus reiciendis quo provident veniam nisi voluptatum consequatur, deserunt natus obcaecati.</a></p>
-                                </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="splide__slide__container">
-                                    <img src="assets/slider-img_3.png" alt="">
-                                </div>
-                                <div class="splide-slide-info">
-                                    <h2 class="splide-slide-info__title">The queen asks: “wither mysterio?”</h2>
-                                    <p class="splide-slide-info__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate tempora sint maxime assumenda commodi sequi officiis, debitis odio temporibus reiciendis quo provident veniam nisi voluptatum consequatur, deserunt natus obcaecati.</a></p>
-                                </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="splide__slide__container">
-                                    <img src="assets/slider-img_4.png" alt="">
-                                </div>
-                                <div class="splide-slide-info">
-                                    <h2 class="splide-slide-info__title">Spider-man fires first shot in mob war!</h2>
-                                    <p class="splide-slide-info__description"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate tempora sint maxime assumenda commodi sequi officiis, debitis odio temporibus reiciendis quo provident veniam nisi voluptatum consequatur, deserunt natus obcaecati.</a></p>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-
-                <article class="news">
-                    <img src="assets/news_6.jpg" alt="" class="news__thumb">
-                    <div class="news-excerpt">
-                        <h2 class="news-excerpt__title">RAID ON AREA FIFTY-FAIL</h2>
-                        <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat deleniti ea est mollitia, amet obcaecati dignissimos exercitationem ex soluta quo asperiores magni! Deserunt laboriosam repellat reiciendis iste illum recusandae repudiandae.</a></p>
-                    </div>
-                </article>
-
-                <article class="news">
-                    <img src="assets/news_7.jpg" alt="" class="news__thumb">
-                    <div class="news-excerpt">
-                        <h2 class="news-excerpt__title">THE QUEEN ASKS: “WITHER MYSTERIO?”</h2>
-                        <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat deleniti ea est mollitia, amet obcaecati dignissimos exercitationem ex soluta quo asperiores magni! Deserunt laboriosam repellat reiciendis iste illum recusandae repudiandae.</a></p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="news-group">
-                <div class="tabs">
-                    <div class="tab-header">
-                        <div class="tab-header__title">don't miss</div>
-                        <div class="tab-header__item">Hot</div>
-                        <div class="tab-header__item">New</div>
-                    </div>
-
-                    <div class="tab-indicator"></div>
-                    <div class="tab-body">
-                        <div class="tab-body__content tab-body__content--active">
-                            <article class="news">
-                                <img src="assets/news_1.jpg" alt="Imagem do Peter Parker" class="news__thumb">
-                                <div class="news-excerpt">
-                                    <h2 class="news-excerpt__title">NIGHT MONKEY: ANOTHER MASKED MENACE?</h2>
-                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
-                                </div>
-                            </article>
-
-                            <article class="news">
-                                <img src="assets/news_3.jpg" alt="Imagem do Peter Parker" class="news__thumb">
-                                <div class="news-excerpt">
-                                    <h2 class="news-excerpt__title">SPIDER-MAN FIRES FIRST SHOT IN MOB WAR!</h2>
-                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
-                                </div>
-                            </article>
-
-                            <article class="news">
-                                <img src="assets/news_7.jpg" alt="Imagem do Peter Parker" class="news__thumb">
-                                <div class="news-excerpt">
-                                    <h2 class="news-excerpt__title">THE QUEEN ASKS: “WITHER MYSTERIO?”</h2>
-                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
-                                </div>
-                            </article>
-
-                            <article class="news">
-                                <img src="assets/news_2.jpg" alt="Imagem do Peter Parker" class="news__thumb">
-                                <div class="news-excerpt">
-                                    <h2 class="news-excerpt__title">THE SEARCH FOR MORRIS BENCH!</h2>
-                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
-                                </div>
-                            </article>
-
-                            <article class="news">
-                                <img src="assets/news_6.jpg" alt="Imagem do Peter Parker" class="news__thumb">
-                                <div class="news-excerpt">
-                                    <h2 class="news-excerpt__title">RAID ON AREA FIFTY-FAIL</h2>
-                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="tab-body__content">
-                            <article class="news">
-                                <img src="assets/news_3.jpg" alt="Imagem do Peter Parker" class="news__thumb">
-                                <div class="news-excerpt">
-                                    <h2 class="news-excerpt__title">SPIDER-MAN FIRES FIRST SHOT IN MOB WAR!</h2>
-                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
-                                </div>
-                            </article>
-
-                            <article class="news">
-                                <img src="assets/news_7.jpg" alt="Imagem do Peter Parker" class="news__thumb">
-                                <div class="news-excerpt">
-                                    <h2 class="news-excerpt__title">THE QUEEN ASKS: “WITHER MYSTERIO?”</h2>
-                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
-                                </div>
-                            </article>
-
-                            <article class="news">
-                                <img src="assets/news_2.jpg" alt="Imagem do Peter Parker" class="news__thumb">
-                                <div class="news-excerpt">
-                                    <h2 class="news-excerpt__title">THE SEARCH FOR MORRIS BENCH!</h2>
-                                    <p class="news-excerpt__description"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam corrupti autem, ab totam laudantium rerum doloremque ad, perferendis nam, illo fuga ipsum magnam amet aut? Obcaecati ipsum incidunt necessitatibus porro?</a></p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="club">
-                <h3 class="club__title">Join our club</h3>
-                <p class="club__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia temporibus debitis labore possimus necessitatibus reiciendis fugit aut esse adipisci in et perferendis doloremque, neque eaque nobis a dolore ullam.</p>
-                <button class="btn btn--large">join now</button>
-            </div>
-
-            <article class="featured-news">
-                <div class="featured-news-excerpt">
-                    <h2 class="featured-news-excerpt__title">meet spider man's girlfriend</h2>
-                    <p class="featured-news-excerpt__description"><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi a repudiandae sunt consequuntur earum voluptatum mollitia soluta cumque odio! Quia eaque quo, excepturi accusamus numquam maxime dolores cupiditate libero voluptates!</a></p>
-                </div>
-                <img src="assets/featured_b.jpg" alt="Imagem do Peter Parker e da MJ" class="featured-news__thumb">
-            </article>
-        </main>
     
+                <div class="ticket-buttons">
+                    <i class="fas fa-chevron-left ticker-buttons__btn-prev"></i>
+                    <i class="fas fa-chevron-right ticker-buttons__btn-next"></i>
+                </div>
+            </section>
 
-        <img src="assets/channels4_banner.jpg" alt="">
+            <div class="container">
+                <div class="left">
+                    <section class="featured-news">
+                        <div class="featured-news__thumb">
+                            <img src="assets/hero_2.jpg" alt="Imagem do Peter Parker" class="featured-news__thumb__img">
+                        </div>
+                        <div class="featured-news-excerpt">
+                            <h2 class="featured-news-excerpt__title">Quem é Peter Parker? O Jovem Por Trás do Mistério</h2>
+                            <p class="featured-news-excerpt__description"><a href="#">Peter Parker, um fotógrafo freelancer do Clarim Diário, parece ser apenas mais um jovem comum de Nova York, mas sua proximidade suspeita com o Homem-Aranha levanta questões. Como ele sempre consegue capturar fotos exclusivas do vigilante mascarado? Criado no Queens após a morte trágica de seu tio Ben, Parker mantém um perfil discreto, mas há rumores de que sua relação com o Homem-Aranha vai muito além das lentes da câmera. O que ele está escondendo? Aqui no Clarim, vamos descobrir.</a></p>
+                        </div>
+                    </section>
 
-        <section class="ads">
-            <div class="ad">
-                <a href="#">
-                    <img src="assets/ad_2.jpg" alt="anuncio da bebida">
-                </a>
+                    <div class="news-group">
+                    <article class="news">
+                        <img src="assets/news_7.jpg" alt="" class="news__thumb">
+                        <div class="news-excerpt">
+                            <h2 class="news-excerpt__title">Mistério em Escalada: O Retorno do Doutor Octopus?</h2>
+                            <p class="news-excerpt__description"><a href="#">O Doutor Octopus foi dado como desaparecido após sua última batalha com o Homem-Aranha, mas novos avistamentos sugerem que o vilão pode estar planejando algo maior. A cidade deve se preparar para uma nova onda de caos?</a></p>
+                        </div>
+                    </article>
+
+                    <article class="news">
+                        <img src="assets/news_2.jpg" alt="" class="news__thumb">
+                        <div class="news-excerpt">
+                            <h2 class="news-excerpt__title">Quem Está Por Trás do Duende Verde?</h2>
+                            <p class="news-excerpt__description"><a href="#">A identidade do vilão Duende Verde continua um mistério. Relatos apontam para uma mente brilhante e poderosa, mas quem seria capaz de criar tanto caos? A busca por respostas continua, e o Clarim está na linha de frente para descobrir o culpado.</a></p>
+                        </div>
+                    </article>
+
+                    <article class="news">
+                        <img src="assets/news_3.jpg" alt="" class="news__thumb">
+                        <div class="news-excerpt">
+                            <h2 class="news-excerpt__title">HOMEM-ARANHA DE PRETO: NOVO TRAJE, NOVO PERIGO?</h2>
+                            <p class="news-excerpt__description"><a href="#">O Homem-Aranha foi flagrado recentemente usando um novo e sinistro traje totalmente preto, levantando ainda mais suspeitas sobre suas verdadeiras intenções. Estaria ele sucumbindo à escuridão? Ou esse traje é o prenúncio de algo ainda pior à espreita nas sombras de Nova York?</a></p>
+                        </div>
+                    </article>
+
+                    <article class="news">
+                        <img src="assets/news_1.jpg" alt="" class="news__thumb">
+                        <div class="news-excerpt">
+                            <h2 class="news-excerpt__title">Vigilante Sem Limites: Homem-Aranha e Sua Destruição em Massa</h2>
+                            <p class="news-excerpt__description"><a href="#">Batalhas recentes envolvendo o Homem-Aranha e vilões superpoderosos resultaram em danos massivos à infraestrutura de Nova York. Será que a cidade pode suportar os custos dessa guerra silenciosa, orquestrada por um vigilante que age sem nenhuma responsabilidade?.</a></p>
+                        </div>
+                    </article>
+
+                    <article class="news">
+                        <img src="assets/hero_3.jpg" alt="" class="news__thumb">
+                        <div class="news-excerpt">
+                            <h2 class="news-excerpt__title">Homem-Aranha: Herói ou Mercenário?</h2>
+                            <p class="news-excerpt__description"><a href="#">Enquanto o Homem-Aranha é visto como um herói por muitos, rumores indicam que ele pode estar lucrando com suas ações. Será que o "amigo da vizinhança" está usando suas habilidades para ganho pessoal, ao invés de proteger Nova York de forma desinteressada?</a></p>
+                        </div>
+                    </article>
+
+
+                    <section class="featured-news">
+                        <div class="featured-news__thumb">
+                            <img src="assets/news_8.jpg" alt="Imagem do Peter Parker" class="featured-news__thumb__img">
+                        </div>
+                        <div class="featured-news-excerpt">
+                            <h2 class="featured-news-excerpt__title">TRÊS HOMENS-ARANHA? O MULTIVERSO É REAL!</h2>
+                            <p class="featured-news-excerpt__description"><a href="#">Acredite se quiser, Nova York, agora temos não um, não dois, mas TRÊS Homens-Aranha correndo por aí! Isso mesmo, testemunhas afirmam ter visto múltiplos Homens-Aranha balançando pelas ruas ao mesmo tempo. A explicação? Alguns "especialistas" em ficção científica estão dizendo que o multiverso — sim, o MULTIVERSO — é real! Será que estamos vivendo em uma novela de super-heróis de quinta categoria? Ou será que esses "outros" Homens-Aranha são apenas impostores tentando roubar os holofotes do verdadeiro? Uma coisa é certa: essa cidade já estava caótica o suficiente com apenas um deles.</a></p>
+                        </div>
+                    </section>
+                </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="right">
+                    <div>
+                        <section class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div class="splide__slide__container">
+                                            <img src="assets/slider-img_1.png" alt="">
+                                        </div>
+                                        <div class="splide-slide-info">
+                                            <h2 class="splide-slide-info__title">Homem-Aranha: Herói ou Ameaça?</h2>
+                                            <p class="splide-slide-info__description"><a href="#">Após mais uma noite de caos nas ruas de Nova York, o vigilante conhecido como Homem-Aranha continua a operar fora da lei. Com poderes que desafiam a compreensão humana, ele age sem nenhuma supervisão, colocando vidas em risco. Suas "operações" muitas vezes deixam um rastro de destruição, enquanto a polícia tenta recuperar o controle das situações causadas por seus combates com criminosos superpoderosos. Será que devemos confiar nesse mascarado? Ou sua presença na cidade traz mais problemas do que soluções?</a></p>
+                                        </div>
+                                    </li>
+
+                                    <li class="splide__slide">
+                                        <div class="splide__slide__container">
+                                            <img src="assets/Oscorp_Tower.jpg" alt="">
+                                        </div>
+                                        <div class="splide-slide-info">
+                                            <h2 class="splide-slide-info__title">Incêndio no Oscorp: Culpa do Cabeça de Teia?</h2>
+                                            <p class="splide-slide-info__description"><a href="#">Na noite passada, um incêndio destruiu parte dos laboratórios da Oscorp, uma das maiores empresas de biotecnologia da cidade. Fontes anônimas afirmam ter visto o Homem-Aranha nas proximidades, levantando suspeitas sobre seu envolvimento no incidente. A Oscorp, conhecida por seus projetos avançados, tem sido um alvo frequente de ataques de criminosos superpoderosos. Estaria o Homem-Aranha tentando interferir nos negócios da empresa ou há algo mais por trás dessa história?</a></p>
+                                        </div>
+                                    </li>
+
+                                    <li class="splide__slide">
+                                        <div class="splide__slide__container">
+                                            <img src="assets/slider-img_3.png" alt="">
+                                        </div>
+                                        <div class="splide-slide-info">
+                                            <h2 class="splide-slide-info__title">Encontro Mortal: Homem-Aranha vs. Doutor Octopus</h2>
+                                            <p class="splide-slide-info__description"><a href="#">Na batalha mais recente do Homem-Aranha contra o infame Doutor Octopus, as ruas de Nova York mais uma vez se transformaram em um campo de guerra. Testemunhas relataram a destruição causada pela batalha, que envolveu carros arremessados e prédios danificados. O Doutor Octopus, um dos vilões mais temidos da cidade, foi mais uma vez derrotado, mas a pergunta permanece: até quando o Homem-Aranha conseguirá manter Nova York segura de ameaças como essa?</a></p>
+                                        </div>
+                                    </li>
+
+                                    <li class="splide__slide">
+                                        <div class="splide__slide__container">
+                                            <img src="assets/slider-img_4.png" alt="">
+                                        </div>
+                                        <div class="splide-slide-info">
+                                            <h2 class="splide-slide-info__title">Mary Jane Watson: A Ligação Entre Parker e o Homem-Aranha?</h2>
+                                            <p class="splide-slide-info__description"><a href="#">Rumores circulam que Mary Jane Watson, uma das pessoas mais próximas de Peter Parker, pode saber mais sobre o Homem-Aranha do que revela. Estaria ela acobertando o vigilante ou apenas presa em um jogo perigoso?</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="club">
+                            <h3 class="club__title">Entre para nosso club!</h3>
+                            <p class="club__description">Aqui você consegue noticias em primeira mão toda semana, imagens exclusivas do cabeça de teia, itens promocionais e muito mais!</p>
+                            <button class="btn btn--large">Inscrever-se agora</button>
+                        </section>
+                        <div class="carousel">
+                            <div class="carousel-item">
+                                <div class="slide-image"
+                                    style="background-image: 
+                    url(assets/journal_1.jpg);">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-image"
+                                    style="background-image: 
+                    url(assets/journal_2.jpg);">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-image"
+                                    style="background-image: 
+                    url(assets/journal_3.jpg);">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-image"
+                                    style="background-image: 
+                    url(assets/journal_4.jpg);">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-image"
+                                    style="background-image: 
+                    url(assets/journal_5.jpg);">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-image"
+                                    style="background-image: 
+                    url(assets/journal_6.jpg);">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="slide-image"
+                                    style="background-image: 
+                    url(assets/journal_7.jpg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="ad">
-                <a href="#">
-                    <img src="assets/ad_3.jpg" alt="anuncio de supermercado">
-                </a>
+            
+            <div class="ads">
+                <div class="ad">
+                    <a href="#">
+                        <img src="assets/ad_2.jpg" alt="anuncio da bebida">
+                    </a>
+                </div>
+    
+                <div class="ad">
+                    <a href="#">
+                        <img src="assets/ad_3.jpg" alt="anuncio de supermercado">
+                    </a>
+                </div>
+    
+                <div class="ad">
+                    <a href="#">
+                        <img src="assets/ad_4.jpg" alt="anuncio loja de roupas">
+                    </a>
+                </div>
             </div>
+        </main>
 
-            <div class="ad">
-                <a href="#">
-                    <img src="assets/ad_4.jpg" alt="anuncio loja de roupas">
-                </a>
-            </div>
-        </section>
-    </div>
-
-    <footer>
+    <footer id="About">
         <div class="footer-sections">
             <section class="footer-about">
                 <h3 class="footer__section-title">
                     <img src="assets/logo.png" alt="Logo Daily Bugle">
                 </h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, delectus ab quia ipsam doloribus voluptatem vero asperiores dicta sint libero optio aut cumque maxime ad fuga rerum. Illo, nisi! Totam?</p>
+                <p>O Clarim Diário é o principal jornal de Nova York, conhecido por suas manchetes sensacionalistas e sua incansável busca pela verdade.Sob a liderança de J. Jonah Jameson, o jornal se destaca por suas matérias polêmicas, especialmente sobre o Homem-Aranha.</p>
             </section>
 
             <section class="footer-newsletter">
-                <h3 class="footer__section-title">newsletter</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum deserunt voluptatem numquam a sint, qui nisi itaque dolore nulla illum enim velit fuga libero ex aut laborum dolores accusantium eaque?</p>
-                <input type="text" placeholder="Enter your email..." class="footer-newsletter__email">
+                <h3 class="footer__section-title">Assine a Newsletter</h3>
+                <p>Quer ficar por dentro das últimas notícias sobre o Homem-Aranha, vilões perigosos e tudo que acontece em Nova York? Inscreva-se na nossa newsletter!</p>
                 <button class="btn btn--large">subscribe</button>
             </section>
 
             <section class="footer-links">
                 <h3 class="footer__section-title">site links</h3>
                 <ul class="footer-links__list">
-                    <li class="footer-links__item"><a href="#"> Help & Support </a></li>
-                    <li class="footer-links__item"><a href="#"> Privacy Policy </a></li>
-                    <li class="footer-links__item"><a href="#"> About Us </a></li>
-                    <li class="footer-links__item"><a href="#"> Contact </a></li>
+                    <li class="footer-links__item"><a href="#"> Ajuda & Suporte</a></li>
+                    <li class="footer-links__item"><a href="#"> Política de Privacidade </a></li>
+                    <li class="footer-links__item"><a href="#"> Sobre Nós </a></li>
+                    <li class="footer-links__item"><a href="#"> Contatos </a></li>
                 </ul>
-            </section>
-
-            <section class="footer-club">
-                <h3 class="footer__section-title">join our club</h3>
-                <p class="footer-club__description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, molestiae itaque amet obcaecati sint deserunt temporibus optio suscipit vero ea excepturi, natus pariatur quod mollitia laudantium ipsum voluptatum odio velit.
-                </p>
-                <button class="btn btn--large">join now</button>
             </section>
         </div>
     </footer>

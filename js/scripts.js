@@ -1,3 +1,33 @@
+// Carrousel
+window.onload = function () {
+    let slides = 
+        document.getElementsByClassName('carousel-item');
+
+    function addActive(slide) {
+        slide.classList.add('active');
+    }
+
+    function removeActive(slide) {
+        slide.classList.remove('active');
+    }
+
+    addActive(slides[0]);
+    setInterval(function () {
+        for (let i = 0; i < slides.length; i++) {
+            if (i + 1 == slides.length) {
+                addActive(slides[0]);
+                setTimeout(removeActive, 350, slides[i]);
+                break;
+            }
+            if (slides[i].classList.contains('active')) {
+                setTimeout(removeActive, 350, slides[i]);
+                addActive(slides[i + 1]);
+                break;
+            }
+        }
+    }, 6000);
+};
+
 const _elements = {
     tickerItems: document.querySelectorAll(".ticker-list__item"),
     tickerPrevBtn: document.querySelector(".ticker-buttons__btn-prev"),
@@ -70,3 +100,39 @@ var splide = new Splide( ".splide", {
     }
 });
 splide.mount();
+
+var increaseFontBtn = document.getElementById("increaseFont");
+var decreaseFontBtn = document.getElementById("decreaseFont");
+
+size = 16;
+
+increaseFontBtn.addEventListener("click", increaseFont);
+function increaseFont() {
+    if (size < 22) {
+        size += 2
+        document.body.style.fontSize = `${size}px`;
+    }
+};
+
+decreaseFontBtn.addEventListener("click", decreaseFont);
+function decreaseFont() {
+    if (size > 14) {
+        size -= 2
+        document.body.style.fontSize = `${size}px`;
+    }
+};
+
+// Theme
+const theme = localStorage.getItem("theme");
+
+(theme) && document.body.classList.add(theme); 
+
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark-mode");
+    } else {
+        localStorage.removeItem("theme");
+    };
+};
+
