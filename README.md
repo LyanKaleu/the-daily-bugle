@@ -1,5 +1,7 @@
 # The Daily Bugle Project - Bimonthly Evaluative Activity
 
+🚀 **[Access The Daily Bugle Website](https://lyankaleu.github.io/the-daily-bugle/)** 🚀
+
 **Institution**: Instituto Federal de Educação, Ciência e Tecnologia do Piauí  
 **Course**: Technical in Systems Development  
 **Subject**: Front-End Web Programming  
