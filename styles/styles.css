@@ -2,11 +2,14 @@
 /* Variáveis
 /**********************************/
 :root {
-	--clr-bg-light: #F5F5F5;
+	--clr-bg-light: #f5f5f5;
 	--clr-bg-dark: #111111;
 	
-	--clr-text-light: #FFE5E6;
-	--clr-text-dark: #1A0000;
+    --clr-text: #fff8e5;
+    --clr-text-news: #000;
+
+	--clr-bg: #fff8e5;
+	--clr-title: #B50000;
 	
 	--clr-main: #B50000;
 
@@ -39,21 +42,25 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font: var(--ts-normal);
-    color: var(--clr-text-dark);
-    background-color: var(--clr-text-light);
     min-width: fit-content;
+    color: var(--clr-title);
+    background-color: var(--clr-bg);
+    filter: sepia(.1);
+    transition: all .5s ease-out;
+    
 }
 
 .btn {
     background-color: var(--clr-bg-dark);
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     font: var(--ts-caption);
     text-transform: uppercase;
-    height: 4.8rem;
+
     padding: 1.6rem;
     border: none;
     cursor: pointer;
@@ -78,6 +85,12 @@ a:hover {
     text-decoration: underline;
 }
 
+p {
+    text-indent: 1.5em;
+    text-align: justify;
+    color: var(--clr-text);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -86,15 +99,46 @@ img {
 
 footer {
     background-color: var(--clr-main);
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     margin-top: 3rem;
 }
 
+/**********************************/
+/* Grid
+/**********************************/
+
 main {
-    display: grid;
-    grid-template-columns: 100%;
+    width: 70%;
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     gap: 30px;
-    padding: 0 1.6rem;
+}
+/* collunns */
+.left {
+    width: 70%;
+}
+
+.right {
+    width: 30%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
 }
 
 .--sr-only {
@@ -115,24 +159,53 @@ main {
     }
 }
 
+
+/**********************************/
+/* Dark Mode
+/**********************************/
+
+.dark-mode {
+    /* buttons */
+    --clr-bg-light: #f5f5f5;
+	--clr-bg-dark: #111111;
+	
+    --clr-text-news: #fff8e5;
+    --clr-text: #fff8e5;
+
+	--clr-bg: #121212;
+	--clr-title: #ff6868;
+
+	--clr-main: #232323;
+}
+
 /**********************************/
 /* Navbar
 /**********************************/
 
 .navbar {
-    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.75) 99.09%);
-    padding: 1.6rem;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    padding: 1.6rem;
+    position: absolute;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .navbar__logo {
-    max-width: 30rem;
+    width: 50rem;
 }
 
-.social-icon {
-    display: none;
+.navbar-options {
+    gap: 50px;
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar-options li {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--clr-text);
 }
 
 @media screen and (min-width: 1170px) {
@@ -147,8 +220,7 @@ main {
 
     .social-icon {
         display: block;
-        background-color: var(--clr-bg-dark);
-        color: var(--clr-text-light);
+        color: var(--clr-text);
         font-size: 4.2rem;
         width: 4.8rem;
         height: 4.8rem;
@@ -169,24 +241,20 @@ main {
 /**********************************/
 
 .hero {
-    background-color: var(--clr-bg-dark);
-    color: var(--clr-text-light);
-    position: relative;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    opacity: .3;
-    background: url("../assets/hero.jpg") no-repeat center center/cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    color: var(--clr-text);
+    background-color: var(--clr-bg-dark);
+    background: url("../assets/hero.jpg") no-repeat center center/cover;
 }
 
 .main-news {
-    position: relative;
-    padding: 1.6rem;
-    padding-top: 19.2rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 .main-news__title {
@@ -207,17 +275,6 @@ main {
 }
 
 /**********************************/
-/* Container
-/**********************************/
-
-.container {
-    display: grid;
-    gap: 30px;
-    margin: 3rem 0;
-    grid-template-columns: minmax(47rem, 1fr);
-}
-
-/**********************************/
 /* Ticker
 /**********************************/
 
@@ -225,6 +282,7 @@ main {
     padding: 0 1.6rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .ticker {
@@ -262,7 +320,7 @@ main {
 }
 
 .ticker-buttons__btn-prev, .ticker-buttons__btn-next {
-    border: .1rem solid var(--clr-text-dark);
+    border: .1rem solid var(--clr-title);
     width: 3rem;
     height: 3rem;
     text-align: center;
@@ -334,9 +392,9 @@ main {
 /**********************************/
 
 .footer-sections {
-    padding: 1.6rem;
+    padding: 0 1.6rem;
     display: grid;
-    gap: 30px;
+    gap: 100px;
 }
 
 .footer__section-title {
@@ -360,7 +418,7 @@ main {
 }
 
 .footer-links__item + .footer-links__item {
-    border-top: .1rem solid var(--clr-text-dark);
+    border-top: .1rem solid var(--clr-title);
 }
 
 .footer-club__description {
@@ -392,19 +450,35 @@ main {
 
 .featured-news {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-wrap: wrap;    
+    border-bottom: 1px solid var(--clr-main);
+}
+
+.featured-news__thumb__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .featured-news__thumb {
-    width: 100%;
+    flex: 1;
+}
+
+.featured-news-excerpt {
+    flex: 1;
+    padding: 1.6rem;
 }
 
 .featured-news-excerpt__title {
     font: var(--ts-caption);
     text-transform: uppercase;
-    color: var(--clr-main);
+    color: var(--clr-title);
     margin-bottom: 1.6rem;
+}
+
+.featured-news-excerpt__description {
+    text-align: justify;
+    color: var(--clr-text-news);
 }
 
 @media screen and (min-width: 960px) {
@@ -429,7 +503,7 @@ main {
 
 .club {
     background-color: var(--clr-main);
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     padding: 1.6rem;
 }
 
@@ -454,22 +528,41 @@ main {
 /* News
 /**********************************/
 
+.news-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .news {
-    display: flex;
-    align-items: center;
+    flex: 1;    
     gap: 8px;
-    margin-bottom: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.6rem 0;
+    padding: 1em 0;
+}
+
+.news__thumb {
+    width: 100px;
+    height: 300px;
+    object-fit: cover;
+}
+.news-excerpt {
+    border-bottom: 1px solid var(--clr-main);
 }
 
 .news-excerpt__title {
     font: var(--ts-caption);
     text-transform: uppercase;
-    color: var(--clr-main);
+    color: var(--clr-title);
     width: 25ch;
 }
 
 .news-excerpt__description {
-    width: 35ch;
+    height: 200px;
+    color: var(--clr-text-news);
+    text-align: justify;
 }
 
 @media screen and (min-width: 600px) {
@@ -495,7 +588,7 @@ main {
 
 .splide-slide-info {
     padding: 1.6rem;
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     margin-bottom: 3.2rem;
 }
 
@@ -511,11 +604,49 @@ main {
 }
 
 .splide__arrow svg {
-    fill: var(--clr-text-light);
+    fill: var(--clr-bg);
 }
 
 .splide__arrow:hover svg {
-    fill: var(--clr-text-dark);
+    fill: var(--clr-title);
+}
+
+/**********************************/
+/* Carrousel
+/**********************************/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 1.6em;
+    overflow: hidden;
+    background-color: #cdcdcd;
+}
+
+.carousel-item .slide-image {
+    width: 100%;
+    height: 500px;  
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 270px;
+    border: none;
+    top: 0;
+    left: 100%;
+}
+
+.carousel-item.active {
+    left: 0;
+    transition: all 0.3s ease-out;
+}
+
+.carousel-item div {
+    height: 100%;
 }
 
 /**********************************/
@@ -534,7 +665,7 @@ main {
 
 .tab-header__title {
     background-color: var(--clr-main);
-    color: var(--clr-text-light);
+    color: var(--clr-text);
 }
 
 .tab-header__item, .tab-header__title {
@@ -544,6 +675,7 @@ main {
 
 .tabs {
     position: relative;
+    background-color: aqua;
 }
 
 .tab-indicator {
