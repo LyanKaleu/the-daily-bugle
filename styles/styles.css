@@ -5,8 +5,11 @@
 	--clr-bg-light: #f5f5f5;
 	--clr-bg-dark: #111111;
 	
-	--clr-text-light: #fff8e5;
-	--clr-text-dark: #1A0000;
+    --clr-text: #fff8e5;
+    --clr-text-news: #000;
+
+	--clr-bg: #fff8e5;
+	--clr-title: #B50000;
 	
 	--clr-main: #B50000;
 
@@ -45,15 +48,16 @@ html {
 body {
     font: var(--ts-normal);
     min-width: fit-content;
-    color: var(--clr-text-dark);
-    background-color: var(--clr-text-light);
+    color: var(--clr-title);
+    background-color: var(--clr-bg);
     filter: sepia(.1);
+    transition: all .5s ease-out;
     
 }
 
 .btn {
     background-color: var(--clr-bg-dark);
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     font: var(--ts-caption);
     text-transform: uppercase;
 
@@ -84,6 +88,7 @@ a:hover {
 p {
     text-indent: 1.5em;
     text-align: justify;
+    color: var(--clr-text);
 }
 
 img {
@@ -94,7 +99,7 @@ img {
 
 footer {
     background-color: var(--clr-main);
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     margin-top: 3rem;
 }
 
@@ -154,6 +159,25 @@ main {
     }
 }
 
+
+/**********************************/
+/* Dark Mode
+/**********************************/
+
+.dark-mode {
+    /* buttons */
+    --clr-bg-light: #f5f5f5;
+	--clr-bg-dark: #111111;
+	
+    --clr-text-news: #fff8e5;
+    --clr-text: #fff8e5;
+
+	--clr-bg: #121212;
+	--clr-title: #ff6868;
+
+	--clr-main: #232323;
+}
+
 /**********************************/
 /* Navbar
 /**********************************/
@@ -181,7 +205,7 @@ main {
 .navbar-options li {
     font-size: 28px;
     font-weight: 800;
-    color: var(--clr-text-light);
+    color: var(--clr-text);
 }
 
 @media screen and (min-width: 1170px) {
@@ -196,7 +220,7 @@ main {
 
     .social-icon {
         display: block;
-        color: var(--clr-text-light);
+        color: var(--clr-text);
         font-size: 4.2rem;
         width: 4.8rem;
         height: 4.8rem;
@@ -219,7 +243,7 @@ main {
 .hero {
     width: 100%;
     height: 100vh;
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     background-color: var(--clr-bg-dark);
     background: url("../assets/hero.jpg") no-repeat center center/cover;
 }
@@ -296,7 +320,7 @@ main {
 }
 
 .ticker-buttons__btn-prev, .ticker-buttons__btn-next {
-    border: .1rem solid var(--clr-text-dark);
+    border: .1rem solid var(--clr-title);
     width: 3rem;
     height: 3rem;
     text-align: center;
@@ -368,9 +392,9 @@ main {
 /**********************************/
 
 .footer-sections {
-    padding: 1.6rem;
+    padding: 0 1.6rem;
     display: grid;
-    gap: 30px;
+    gap: 100px;
 }
 
 .footer__section-title {
@@ -394,7 +418,7 @@ main {
 }
 
 .footer-links__item + .footer-links__item {
-    border-top: .1rem solid var(--clr-text-dark);
+    border-top: .1rem solid var(--clr-title);
 }
 
 .footer-club__description {
@@ -448,12 +472,13 @@ main {
 .featured-news-excerpt__title {
     font: var(--ts-caption);
     text-transform: uppercase;
-    color: var(--clr-main);
+    color: var(--clr-title);
     margin-bottom: 1.6rem;
 }
 
 .featured-news-excerpt__description {
     text-align: justify;
+    color: var(--clr-text-news);
 }
 
 @media screen and (min-width: 960px) {
@@ -478,7 +503,7 @@ main {
 
 .club {
     background-color: var(--clr-main);
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     padding: 1.6rem;
 }
 
@@ -530,12 +555,13 @@ main {
 .news-excerpt__title {
     font: var(--ts-caption);
     text-transform: uppercase;
-    color: var(--clr-main);
+    color: var(--clr-title);
     width: 25ch;
 }
 
 .news-excerpt__description {
     height: 200px;
+    color: var(--clr-text-news);
     text-align: justify;
 }
 
@@ -562,7 +588,7 @@ main {
 
 .splide-slide-info {
     padding: 1.6rem;
-    color: var(--clr-text-light);
+    color: var(--clr-text);
     margin-bottom: 3.2rem;
 }
 
@@ -578,11 +604,11 @@ main {
 }
 
 .splide__arrow svg {
-    fill: var(--clr-text-light);
+    fill: var(--clr-bg);
 }
 
 .splide__arrow:hover svg {
-    fill: var(--clr-text-dark);
+    fill: var(--clr-title);
 }
 
 /**********************************/
@@ -639,7 +665,7 @@ main {
 
 .tab-header__title {
     background-color: var(--clr-main);
-    color: var(--clr-text-light);
+    color: var(--clr-text);
 }
 
 .tab-header__item, .tab-header__title {

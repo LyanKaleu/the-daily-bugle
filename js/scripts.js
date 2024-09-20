@@ -101,10 +101,10 @@ var splide = new Splide( ".splide", {
 });
 splide.mount();
 
-increaseFontBtn = document.getElementById("increaseFont");
-decreaseFontBtn = document.getElementById("decreaseFont");
+var increaseFontBtn = document.getElementById("increaseFont");
+var decreaseFontBtn = document.getElementById("decreaseFont");
 
-size = 16
+size = 16;
 
 increaseFontBtn.addEventListener("click", increaseFont);
 function increaseFont() {
@@ -121,3 +121,18 @@ function decreaseFont() {
         document.body.style.fontSize = `${size}px`;
     }
 };
+
+// Theme
+const theme = localStorage.getItem("theme");
+
+(theme) && document.body.classList.add(theme); 
+
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark-mode");
+    } else {
+        localStorage.removeItem("theme");
+    };
+};
+

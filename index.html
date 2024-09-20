@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,9 @@
 
     <title>The Daily Bugle</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,16 +22,9 @@
 
     <h1 class="--sr-only">The Daily Bugle</h1>
     <nav class="navbar">
-        <div class="row">
-            <div class="col">
-                <button id="increaseFont" class="btn">A+</button>
-                <button id="decreaseFont" class="btn">A-</button>
-            </div>
-            <img src="assets/logo.png" alt="Logo Daily Bugle" class="navbar__logo">
-        </div>
+        <img src="assets/logo.png" alt="Logo Daily Bugle" class="navbar__logo">
         <ul class="navbar-options">
-            <li><a href="#All">Tudo</a></li>
-            <li><a href="#">Em alta</a></li>
+            <li><a href="#All">Notícias</a></li>
             <li><a href="#About">Sobre</a></li>
         </ul>
     </nav>
@@ -40,6 +33,11 @@
         <div class="main-news">
             <h2 class="main-news__title">O Verdadeiro Homem-Aranha: <br> O Que Ele Está Escondendo?</h2>
             <p class="main-news__description">Quem é o Homem-Aranha e por que ele se esconde atrás de uma máscara? Enquanto muitos nova-iorquinos o tratam como um herói, suas ações levantam suspeitas. Ele atrai vilões poderosos para a cidade e age fora da lei, sem prestar contas a ninguém. Será que seus motivos são realmente nobres ou há algo mais sombrio por trás de seus atos? Com suas habilidades misteriosas e conexões duvidosas, o Homem-Aranha pode estar escondendo um perigo maior do que imaginamos. O Clarim Diário está comprometido em descobrir a verdade.</p>
+        </div>
+        <div class="row" style="position: absolute; top: 30px; right: 30px;">
+            <button id="increaseFont" class="btn">A+</button>
+            <button id="decreaseFont" class="btn">A-</button>
+            <button onclick="toggleTheme()" class="btn">Tema</button>
         </div>
     </header>
 
@@ -130,7 +128,7 @@
 
                 <!-- Right Content -->
                 <div class="right">
-                    <article>
+                    <div>
                         <section class="splide">
                             <div class="splide__track">
                                 <ul class="splide__list">
@@ -181,7 +179,7 @@
                             <p class="club__description">Aqui você consegue noticias em primeira mão toda semana, imagens exclusivas do cabeça de teia, itens promocionais e muito mais!</p>
                             <button class="btn btn--large">Inscrever-se agora</button>
                         </section>
-                        <section class="carousel">
+                        <div class="carousel">
                             <div class="carousel-item">
                                 <div class="slide-image"
                                     style="background-image: 
@@ -224,12 +222,12 @@
                     url(assets/journal_7.jpg);">
                                 </div>
                             </div>
-                        </section>
-                    </article>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <section class="ads">
+            <div class="ads">
                 <div class="ad">
                     <a href="#">
                         <img src="assets/ad_2.jpg" alt="anuncio da bebida">
@@ -247,7 +245,7 @@
                         <img src="assets/ad_4.jpg" alt="anuncio loja de roupas">
                     </a>
                 </div>
-            </section>
+            </div>
         </main>
 
     <footer id="About">
@@ -256,32 +254,23 @@
                 <h3 class="footer__section-title">
                     <img src="assets/logo.png" alt="Logo Daily Bugle">
                 </h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, delectus ab quia ipsam doloribus voluptatem vero asperiores dicta sint libero optio aut cumque maxime ad fuga rerum. Illo, nisi! Totam?</p>
+                <p>O Clarim Diário é o principal jornal de Nova York, conhecido por suas manchetes sensacionalistas e sua incansável busca pela verdade.Sob a liderança de J. Jonah Jameson, o jornal se destaca por suas matérias polêmicas, especialmente sobre o Homem-Aranha.</p>
             </section>
 
             <section class="footer-newsletter">
-                <h3 class="footer__section-title">newsletter</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum deserunt voluptatem numquam a sint, qui nisi itaque dolore nulla illum enim velit fuga libero ex aut laborum dolores accusantium eaque?</p>
-                <input type="text" placeholder="Enter your email..." class="footer-newsletter__email">
+                <h3 class="footer__section-title">Assine a Newsletter</h3>
+                <p>Quer ficar por dentro das últimas notícias sobre o Homem-Aranha, vilões perigosos e tudo que acontece em Nova York? Inscreva-se na nossa newsletter!</p>
                 <button class="btn btn--large">subscribe</button>
             </section>
 
             <section class="footer-links">
                 <h3 class="footer__section-title">site links</h3>
                 <ul class="footer-links__list">
-                    <li class="footer-links__item"><a href="#"> Help & Support </a></li>
-                    <li class="footer-links__item"><a href="#"> Privacy Policy </a></li>
-                    <li class="footer-links__item"><a href="#"> About Us </a></li>
-                    <li class="footer-links__item"><a href="#"> Contact </a></li>
+                    <li class="footer-links__item"><a href="#"> Ajuda & Suporte</a></li>
+                    <li class="footer-links__item"><a href="#"> Política de Privacidade </a></li>
+                    <li class="footer-links__item"><a href="#"> Sobre Nós </a></li>
+                    <li class="footer-links__item"><a href="#"> Contatos </a></li>
                 </ul>
-            </section>
-
-            <section class="footer-club">
-                <h3 class="footer__section-title">join our club</h3>
-                <p class="footer-club__description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, molestiae itaque amet obcaecati sint deserunt temporibus optio suscipit vero ea excepturi, natus pariatur quod mollitia laudantium ipsum voluptatum odio velit.
-                </p>
-                <button class="btn btn--large">join now</button>
             </section>
         </div>
     </footer>
